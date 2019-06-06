@@ -1,6 +1,7 @@
 package com.ylz.jckdemo.web;
 
-import com.ylz.jckdemo.service.JckService;
+import com.ylz.jckdemo.service.DbRepositoryService;
+import com.ylz.jckdemo.service.FileRepositoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +11,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class JckController {
 
     @Autowired
-    JckService service;
+    FileRepositoryService service;
+
+    @Autowired
+    DbRepositoryService dbRepositoryService;
 
     @RequestMapping(value = "testData")
     String test() throws Exception {

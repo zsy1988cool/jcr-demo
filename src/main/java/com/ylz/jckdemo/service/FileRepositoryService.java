@@ -25,7 +25,7 @@ import java.util.Calendar;
 import java.util.Hashtable;
 
 @Service
-public class JckService implements InitializingBean {
+public class FileRepositoryService implements InitializingBean {
 
     private Session jcrSession;
 
